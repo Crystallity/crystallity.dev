@@ -1,4 +1,4 @@
 function start() {
     let display = document.getElementById('display');
-    display.src = './something.html'
+    display.src = './something.html';
 }
