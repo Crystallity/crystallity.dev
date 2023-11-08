@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <!-- import external stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <span class="ver">0.0.0</span>
+
+        <h1>Changelog (v0.0.0)</h1>
+        <div class="patch">
+            <details>
+                <summary><h2 class="summary">0.0.0</h2></summary>
+                <p>Beta version of the site. No features implemented other than the homepage.</p>
+            </details>
+        </div>
+
+    </body>
+</html>
