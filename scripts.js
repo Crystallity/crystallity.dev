@@ -1,4 +1,4 @@
-let timer = 4;
+let timer = 21;
 
 function countdown() {
     if (timer <= 0) {
@@ -10,6 +10,6 @@ function countdown() {
     }
 }
 
-function redirect() {
-    window.location.replace('https://github.com/Crystallity/crystallity.github.io/tree/main');
+function redirect(href) {
+    window.location.replace(href);
 }
