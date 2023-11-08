@@ -1,1 +1,1 @@
-
+window.location.replace('https://github.com/Crystallity/crystallity.github.io/tree/main');
