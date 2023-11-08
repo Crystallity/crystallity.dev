@@ -1,4 +1,4 @@
 function start() {
     let display = document.getElementById('display');
-    display.src = 'https://longleafschool.instructure.com';
+    display.src = 'https://www.google.com';
 }
