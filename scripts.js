@@ -5,7 +5,7 @@ function countdown() {
         redirect();
     } else {
         timer -= 1;
-        document.querySelector('#counter').innerHTML = toString(timer);
+        document.querySelector('#counter').innerHTML = timer.toString();
         setTimeout(countdown, 1000);
     }
 }
