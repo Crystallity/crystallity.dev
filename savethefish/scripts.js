@@ -1,8 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-  modal('lowRequestModal','show');
-});
-
-
 async function server(file, mode, content) {
     return await fetch('https://snapextensions.uni-goettingen.de/handleTextfile.php?type=' + mode + '&content=' + content + '&filename=./textfiles/savethefish_' + file).then(response => {
             if (!response.ok) {throw new Error('HTTP Error! status: ' + response.status)}
@@ -35,7 +30,7 @@ function modal(modal, mode) {
 }
 
 function copyShareLink() {
-    navigator.clipboard.writeText('http://savethefish.w3schools.com');
+    navigator.clipboard.writeText('https://crystallity.github.io/savethefish');
     alert('copied link\n\nspread the word!')
 }
 
