@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>save the fish</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Load favicon -->
+        <link rel="icon" type="image/x-icon" href="logo.ico">
+
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.3.0/crypto-js.js"></script>
+
+    </head>
+
+    <body>
+        <span class="ver">0.0.0</span>
+
+        <h1>save the fish</h1>
+
+        <p>
+            the fish are drowning in the ocean<br>
+            we have to save the fish!!!!<br>
+            you can help save the fish by spreading the word<br>
+            tell everyone you know!!<br>
+        </p>
+
+        <h2>pictures</h2>
+
+        <div style="display: block; overflow: auto; text-align: center;">
+            <div class="gallery">
+                <a target="_blank" href="logo.png">
+                    <img src="logo.png" alt="logo" width="600" height="400">
+                </a>
+                <div class="desc">logo<br>save the fish logo</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="poster1.png">
+                    <img src="poster1.png" alt="poster 1" width="600" height="400">
+                </a>
+                <div class="desc">poster 1<br>main poster</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="poster2.png">
+                    <img src="poster2.png" alt="poster 2" width="600" height="400">
+                </a>
+                <div class="desc">poster 2<br>did you know</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="poster3.png">
+                    <img src="poster3.png" alt="poster 3" width="600" height="400">
+                </a>
+                <div class="desc">poster 3<br>join the campaign</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="poster4.png">
+                    <img src="poster4.png" alt="poster 4" width="600" height="400">
+                </a>
+                <div class="desc">poster 4<br>destroy the ocean</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="poster5.png">
+                    <img src="poster5.png" alt="poster 5" width="600" height="400">
+                </a>
+                <div class="desc">poster 5<br>website link</div>
+            </div>
+        </div>
+
+        <div style="text-align:center;">
+        <h2>help save the fish</h2>
+        <p>click the button to share!!!</p>
+        <center><a href="mailto:?subject=save the fish&amp;body=fish are drowning every day. help save the fish! http://savethefish.w3spaces.com"><button>email</button></a></center><br>
+            <p style="display:inline;">or, you can send this link yourself: </p> <p onclick="copyShareLink()" style="display:inline; color: blue; cursor: pointer;">savethefish.w3spaces.com</p> <p style="display:inline">(click to copy)</p>
+        </div>
+
+        <button onclick="modal('loginModal','show')" class="hidde">open modal test</button>
+        <button onlick="login()" class="hidden">run login test</button>
+
+        <div id="loginModal" class="modal">
+            <div class="modal-content-wrapper">
+                <span onclick="modal('loginModal','hide')" class="close">&times;</span>
+                <div class="modal-content">
+                  <h2>login to savethefish</h2>
+                  <form id="loginForm">
+                    <div class="formSection">
+                        <label for="username">username</label>
+                        <input type="text" id="username"></input>
+                    </div><div class="formSection">
+                        <label for="password">password</label>
+                        <input type="password" id="password"></input>
+                    </div>
+                  </form>
+                  <p style="color:red">this window doesn't do anything yet</p>
+                  <p style="color:red">i'm vaguely impressed you found it</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="lowRequestModal" class="modal">
+            <div class="modal-content-wrapper">
+                <span onclick="modal('lowRequestModal','hide')" class="close">&times;</span>
+                <div class="modal-content">
+                    <h2>the savethefish website is low on requests!</h2>
+                    <p>
+                        there have been lots of visits to the site recently! please try to limit opening
+                        the site, otherwise it may run out. if that happens, it will temporarily shut down.
+                    </p>
+                    <button onclick="modal('lowRequestModal','hide')" style="font-size:20px">close</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
