@@ -30,8 +30,12 @@ function modal(modal, mode) {
 }
 
 function copyShareLink() {
-    navigator.clipboard.writeText('https://crystallity.github.io/savethefish');
-    alert('copied link\n\nspread the word!')
+    navigator.clipboard.writeText('https://crystallity.github.io/savethefish')
+    .then(result => {
+        alert('Successfully copied!\n\nOutput: ' + result);
+    }).catch(error => {
+        alert('Error copying: ' + error);
+    });
 }
 
 function login() {
