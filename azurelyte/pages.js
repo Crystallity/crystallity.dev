@@ -144,7 +144,7 @@ function toggleNav() {
     }
 }
 
-function fetchPage(source) {
+async function fetchPage(source) {
     overwriteCl(await (await fetch(source)).text());
 }
 
