@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Quicksand&family=Raleway&display=swap');
+h1 { color: yellow; }
             
             @media screen and (max-width: 900px) {
                 #navbar {
