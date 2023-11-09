@@ -144,4 +144,8 @@ function toggleNav() {
     }
 }
 
+function fetchPage(source) {
+    overwriteCl(await (await fetch(source)).text());
+}
+
 window.onresize = closeNav;
