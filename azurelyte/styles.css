@@ -208,11 +208,11 @@ summary::before {
     display: inline-block;
     font-size: 32px;
     transition: 0.2s;
-    content: '\203A';
+    content: '+';
 }
 
 details[open] > summary::before {
-    transform: rotate(90deg);
+    content: '-';
 }
 
 details[open] > summary {
