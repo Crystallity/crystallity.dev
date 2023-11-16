@@ -219,7 +219,11 @@ details[open] > summary {
     border-bottom: 2px solid #505050;
 }
 
-details summary::-webkit-details-marker {
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
     display:none;
 }
 
