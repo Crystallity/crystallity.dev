@@ -22,9 +22,9 @@ function overwriteCl(next) {
 
 async function fetchText(sources) {
     const output = new Array();
-    sources.forEach(source => {
+    for (source of sources) {
         (await (await fetch(source)).text()).then(data => {output.push(data)});
-    });
+    };
     return output;
 }
 
