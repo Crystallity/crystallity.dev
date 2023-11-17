@@ -65,8 +65,6 @@ let changelog = `
 <div id="changelogDivLeft" class="changelogDiv"></div>
 `;
 
-let e = false;
-
 function setChangelogSize() {
     left = document.getElementById('changelogDivLeft');
     right = document.getElementById('changelogDivRight');
