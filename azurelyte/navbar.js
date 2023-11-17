@@ -1,3 +1,5 @@
+let e = false;
+
 function openNav() {
     e = true;
     if (window.innerWidth > 900) {
