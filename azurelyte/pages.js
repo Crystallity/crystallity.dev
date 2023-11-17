@@ -20,16 +20,15 @@ function overwriteCl(next) {
     }
 }
 
-async function fetchText(sources) {
-    const output = new Array();
-    for (source of sources) {
-        (await (await fetch(source)).text()).then(data => {output.push(data)});
-    };
-    return output;
+async function fetchText(source) {
+    return await (await fetch(source)).text()
 }
 
-function loadContent() {
-    var page_home, page_1, page_2, page_styletest, page_writetest2;
 
-    
+var page_home, page_1, page_2, page_styletest, page_writetest2;
+
+function loadContent() {
+    fetchText('./home.html').then(data => {page_home = data});
+
+    overwrite(page_home);
 }
