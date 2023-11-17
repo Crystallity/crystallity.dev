@@ -26,6 +26,10 @@ async function fetchText(source) {
 
 window.onresize = closeNav;
 
-var home;
+var page_home, page_1, page_2, page_styletest, page_writetest2;
 
-fetchText('./home.html').then(data => {home = data});
+fetchText('./home.html').then(data => {page_home = data});
+fetchText('./page1.html').then(data => {page_1 = data});
+fetchText('./page2.html').then(data => {page_2 = data});
+fetchText('./styletest.html').then(data => {page_styletest = data});
+fetchText('./writetest2.html').then(data => {page_writetest2 = data});
