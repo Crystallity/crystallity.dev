@@ -26,3 +26,6 @@ async function fetchText(source) {
 
 window.onresize = closeNav;
 
+var home;
+
+fetchText('./home.html').then(data => {home = data});
