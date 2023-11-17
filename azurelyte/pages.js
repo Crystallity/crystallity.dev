@@ -146,6 +146,7 @@ function toggleNav() {
 
 async function fetchVar(variable, source) {
     variable = await (await fetch(source)).text();
+    alert('ran fetchVar() with output:' + variable);
 }
 
 window.onresize = closeNav;
