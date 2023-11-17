@@ -28,11 +28,9 @@ var page_home, page_1, page_2, page_styletest, page_writetest2;
 
 function loadContent() {
     // I am so sorry for this code, I promise I tried to do it better
-    fetchText('./home.html').then(data => {page_home = data});
+    fetchText('./home.html').then(data => {page_home = data; overwrite(data)});
     fetchText('./page1.html').then(data => {page_1 = data});
     fetchText('./page2.html').then(data => {page_2 = data});
     fetchText('./styletest.html').then(data => {page_styletest = data});
     fetchText('./writetest2.html').then(data => {page_writetest2 = data});
-
-    overwrite(page_home);
 }
