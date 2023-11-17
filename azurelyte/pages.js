@@ -12,11 +12,11 @@ function overwriteEx(next) {
     setTimeout(overwrite, 500, next);
 }
 
-function overwriteCl(nex) {
+function overwriteCl(next) {
     if (e) {
-        overwriteEx(nex);
+        overwriteEx(next);
     } else {
-        overwrite(nex);
+        overwrite(next);
     }
 }
 
@@ -72,22 +72,6 @@ function setChangelogSize() {
     left.style.width = newSize;
     right.style.width = newSize;
 }
-
-let page1 = `
-<h1>This is Page 1.</h1>
-<p>Click these buttons to change page content (<strong>without</strong> changing the url!).</p>
-<h2>>:P</h2>
-<button onclick="overwriteCl(home)">Load Homepage</button>
-<button onclick="overwriteCl(page2)">Load Page 2</button>
-`;
-
-let page2 = `
-<h1>This is Page 2</h1>
-<p>Click these buttons to change page content (<strong>without</strong> changing the url!).</p>
-<h2>\\(*v*)/</h2>
-<button onclick="overwriteCl(home)">Load Homepage</button>
-<button onclick="overwriteCl(page1)">Load Page 1</button>
-`;
 
 async function fetchText(source) {
     return await (await fetch(source)).text();
