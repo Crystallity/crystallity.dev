@@ -1,3 +1,25 @@
+function overwrite(next) {
+    main = document.getElementById("main");
+    newPage = document.createElement("div");
+    newPage.innerHTML = '<div id="main">' + next + '</div>';
+    parent = main.parentNode;
+    parent.insertBefore(newPage, main);
+    parent.removeChild(main);
+}
+
+function overwriteEx(next) {
+    closeNav();
+    setTimeout(overwrite, 500, next);
+}
+
+function overwriteCl(nex) {
+    if (e) {
+        overwriteEx(nex);
+    } else {
+        overwrite(nex);
+    }
+}
+
 let home = `
 <h1 class="docHead">AzureLyte</h1>
 <h1>Welcome to the writetest page.</h1>
@@ -75,4 +97,3 @@ async function fetchText(source) {
 
 window.onresize = closeNav;
 
-page1 = await fetchText('./styletest.html');
