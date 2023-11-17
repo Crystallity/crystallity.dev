@@ -144,8 +144,10 @@ function toggleNav() {
     }
 }
 
-async function fetchPage(source) {
-    overwriteCl(await (await fetch(source)).text());
+async function fetchVar(variable, source) {
+    variable = await (await fetch(source)).text();
 }
 
 window.onresize = closeNav;
+
+fetchVar(page1, './styletest.html');
