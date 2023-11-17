@@ -20,14 +20,16 @@ function overwriteCl(next) {
     }
 }
 
-async function fetchText(source) {
-    return await (await fetch(source)).text();
+async function fetchText(sources) {
+    const output = new Array();
+    sources.forEach(source => {
+        output.push(await (await fetch(source)).text());
+    });
+    return output;
 }
 
-var page_home, page_1, page_2, page_styletest, page_writetest2;
+function loadContent() {
+    var page_home, page_1, page_2, page_styletest, page_writetest2;
 
-fetchText('./home.html').then(data => {page_home = data});
-fetchText('./page1.html').then(data => {page_1 = data});
-fetchText('./page2.html').then(data => {page_2 = data});
-fetchText('./styletest.html').then(data => {page_styletest = data});
-fetchText('./writetest2.html').then(data => {page_writetest2 = data});
+    
+}
