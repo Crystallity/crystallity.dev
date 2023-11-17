@@ -24,8 +24,6 @@ async function fetchText(source) {
     return await (await fetch(source)).text();
 }
 
-window.onresize = closeNav;
-
 var page_home, page_1, page_2, page_styletest, page_writetest2;
 
 fetchText('./home.html').then(data => {page_home = data});
