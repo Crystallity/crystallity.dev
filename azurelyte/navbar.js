@@ -6,14 +6,14 @@ function openNav() {
         document.getElementById("navbar-expanded").innerHTML = `
             <span class="material-symbols-rounded navbarIcon" id="closeBttn" onclick="toggleNav()">close</span>
             <a class="navlink" onclick="closeNav()">Open/Close Menu</a>
-            <a class="navlink" onclick="overwriteEx(page1)">Home</a>
+            <a class="navlink" onclick="overwriteEx(page_home)">Home</a>
             <a class="navlink" href="#">Help</a>
-            <a class="navlink" href="https://snap.berkeley.edu/snap/snap.html">Snap! Apps</a>
+            <a class="navlink" href="#">Snap! Apps</a>
             <a class="navlink" href="#">Falconnect</a>
             <a class="navlink" href="#">Web Apps</a>
             <a class="navlink" href="#">News</a>
             <a class="navlink" href="#">Site Changelog</a>
-            <a class="navlink" href="#">Profile</a>
+            <a class="navlink" onclick="window.location.replace('https://crystallity.github.io')">Profile</a>
         `;
         document.getElementById("navbar-expanded").style.width = "500px";
         document.getElementById("main").style.marginLeft = "560px";
