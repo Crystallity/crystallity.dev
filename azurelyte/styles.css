@@ -229,7 +229,7 @@ details > summary::-webkit-details-marker {
     display: none;
 }
 
-details.small > summary {
+details.small {
     display: inline;
     width: auto;
 }
