@@ -226,7 +226,12 @@ details > summary {
 }
 details > summary::marker,
 details > summary::-webkit-details-marker {
-    display:none;
+    display: none;
+}
+
+details.small > summary {
+    display: inline;
+    width: auto;
 }
 
 p {
