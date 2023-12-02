@@ -1,4 +1,4 @@
-let timer = 11;
+let timer = 21;
 
 function countdown() {
     if (timer <= 0) {
