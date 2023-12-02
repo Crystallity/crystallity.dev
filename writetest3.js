@@ -1,5 +1,5 @@
 function startup() {
-    document.querySelector('#prefetch').addEventListener('onclick', loadPage)
+    document.querySelector('button').forEach((button) => button.addEventListener('onclick', loadPage));
 }
 
 function loadPage(button) {
@@ -16,5 +16,3 @@ function loadPage(button) {
         throw new Error('function loadPage() could not determine trigger element!');
     }
 }
-
-document.body.addEventListener('onload', startup);
