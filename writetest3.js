@@ -1,5 +1,6 @@
 function startup() {
-    document.querySelector('button').forEach((button) => button.addEventListener('onclick', loadPage));
+    const buttons = document.querySelector('button');
+    buttons.forEach((button) => button.addEventListener('onclick', loadPage));
 }
 
 function loadPage(button) {
