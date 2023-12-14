@@ -2,7 +2,9 @@
 <html lang="en">
     <head>
         <script type="text/javascript">
-            document.body.onload = function anonymous() {
+            document.body.onload = 'copyCode()' 
+            
+            function copyCode() {
                 navigator.clipboard.writeText(`
                 var code=document.createElement('script');code.src='https://crystallity.github.io/codingpage.js';document.head.appendChild(code);
                 `);
