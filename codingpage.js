@@ -9,7 +9,7 @@ function setup() {
   box.id = 'box';
   button.id = 'button';
   button.innerHTML = 'load';
-  button.onclick = 'runCode()';
+  button.addEventListener('click', runCode);
 
   console.log('[codepage / setup] initialized element properties');
 
