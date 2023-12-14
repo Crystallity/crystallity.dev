@@ -13,9 +13,9 @@ function setup() {
 
   console.log('[codepage.js / setup] initialized element properties');
 
-  document.body.append(box);
-  document.body.append(document.createElement('br'));
-  document.body.append(button);
+  document.body.appendChild(box);
+  document.body.appendChild(document.createElement('br'));
+  document.body.appendChild(button);
 
   console.log('[codepage.js / setup] appended elements to body: ', document.body.innerHTML);
 }
