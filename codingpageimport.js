@@ -1,1 +1,0 @@
-var code=document.createElement('script');code.src='https://crystallity.github.io/codingpage.js';document.head.appendChild(code);
