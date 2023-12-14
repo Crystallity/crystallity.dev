@@ -24,3 +24,6 @@ function runCode() {
   console.log('[codepage / runCode] running eval on #box.value');
   eval(document.querySelector('#box').value);
 }
+
+console.log('[codepage / import] successfully loaded codingpage.js');
+setup();

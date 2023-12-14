@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript">
+            document.body.onload = function anonymous() {
+                navigator.clipboard.writeText(`
+                var code=document.createElement('script');code.src='https://crystallity.github.io/codingpage.js';document.head.appendChild(code);
+                `);
+                alert('Copied import code to clipboard! To set up codingpage.js:\n1. Open a new tab and type "about:blank" into the address bar.\n2. An empty page will open. Stay on it and paste into the address bar.\n3. Go to the start of the code you copied. Make sure it begins with "var" and not "about:blank" - if it does, delete "about:blank". Finally, add "javascript:" before it and press enter. The script should begin importing!');
+            };
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
