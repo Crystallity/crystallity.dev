@@ -1,15 +1,15 @@
 function setup() {
   console.log('[codepage.js / setup] running setup function');
   
-  let box = document.createElement(‘textarea’);
-  let button = document.createElement(‘button’);
+  let box = document.createElement('textarea');
+  let button = document.createElement('button');
 
   console.log('[codepage.js / setup] created elements: ', box, button);
 
-  box.id = ‘box’;
-  button.id = ‘button’;
-  button.innerHTML = ‘load’;
-  button.onclick = ‘runCode()’;
+  box.id = 'box';
+  button.id = 'button';
+  button.innerHTML = 'load';
+  button.onclick = 'runCode()';
 
   console.log('[codepage.js / setup] initialized element properties');
 
@@ -21,6 +21,6 @@ function setup() {
 }
 
 function runCode() {
-  console.log('[codepage.js / runCode] running eval on #box.innerText: ', document.querySelector('#box).innerText);
-  eval(document.querySelector(‘#box’).innerText);
+  console.log('[codepage.js / runCode] running eval on #box.innerText: ', document.querySelector('#box').innerText);
+  eval(document.querySelector('#box').innerText);
 }
