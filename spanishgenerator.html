@@ -24,6 +24,8 @@
                 const nounsPlural = ['Nosotros', 'Nosotras', 'UstedesIm', 'Ellos', 'Ellas', 'Las estudiantes', 'Mis amigos'];
                 const verbs = ['Eschuch', 'Busc', 'Ayud'];
 
+                console.log('loaded constants');
+
                 // I might add more words later but these work for now.
 
                 let plural1, plural2 = Math.round(Math.random());
@@ -43,6 +45,8 @@
                 } else {
                     let conjugate = 'a';
                 }
+
+                console.log('generated values');
                 
                 // Constructing the sentence.
                 let sentence = noun1 + ' ' + verbs[Math.round(Math.random()*(verbs.length-1))] + conjugate + ' ' + noun2 + '.';
@@ -55,12 +59,12 @@
         </script>
     </head>
 
-    <body">
+    <body onload="document.querySelector('#generate').addEventListener('click', createSentence)">
         <!-- The HTML is super simple. I tried to use addEventListener for events, but I was
-        having difficulty with it, so I went for inline listeners. -->
+        having difficulty with it, so I went for an inline onload listener. -->
         <h1 class="docHead" style="margin: 10px;">Spanish Phrase Generator</h1>
         <h2>Press the button to generate a random sentence in Spanish.</h2>
-        <button onclick="createSentence()">Generate</button>
+        <button id="generate">Generate</button>
         <h1 id="output"></h1>
     </body>
 </html>
