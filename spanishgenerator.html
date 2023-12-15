@@ -68,8 +68,6 @@
         </script>
         <!-- Inline stylesheet for small modifications -->
         <style>
-            .docHead {margin: 10px;}
-
             #output {
                 border: 3px solid #3030f0;
                 border-radius: 10px;
@@ -84,7 +82,7 @@
     <body onload="document.querySelector('#generate').addEventListener('click', createSentence)">
         <!-- The HTML is super simple. I tried to use addEventListener for events, but I was
         having difficulty with it, so I went for an inline onload listener. -->
-        <h1 class="docHead">Spanish Phrase Generator</h1>
+        <h1 class="docHead" style="margin: 10px;">Spanish Phrase Generator</h1>
         <h2>Press the button to generate a random sentence in Spanish.</h2>
         <button id="generate">Generate</button>
         <div id="output"></div>
