@@ -3,7 +3,7 @@
     - Spanish Text Generator -
     This is a little project I made that creates random phrases in Spanish.
     Inspired by the first actually helpful Spanish class I took. It's not
-    very technically impressive, but I wrote commentd for once. :)
+    very technically impressive, but I wrote comments for once. :)
 -->
 <html lang="en">
     <head>
@@ -14,14 +14,15 @@
         <!-- Inline JS - normally I would use a seperate file but it's just a small project. -->
         <script type="text/javascript">
             function createSentence() {
+                // I had some annoying bugs, so this function spams the console a bit with debug logs.
                 console.log('starting sentence creation');
 
                 // I'm using a simple algorithm that sticks subjects and verbs together.
                 let output = document.querySelector('#output');
 
-                // I know some of these are pronouns, but they're interchangible with nouns.
-                const nounsSingle = ['Yo', 'Tu', 'El', 'Ella', 'La estudiante', 'Mi amigo', 'Tu maestra'];
-                const nounsPlural = ['Nosotros', 'Nosotras', 'UstedesIm', 'Ellos', 'Ellas', 'Las estudiantes', 'Mis amigos'];
+                
+                const nounsSingle = ['la estudiante', 'mi amigo', 'el maestro', 'la escuela', 'el borrador', 'la computadora'];
+                const nounsPlural = ['las estudiantes', 'mis amigos', 'los maestros', 'las escuelas', 'los borradores', 'las computadoras'];
                 const verbs = ['Eschuch', 'Busc', 'Ayud'];
 
                 console.log('loaded constants: output =', output, 'nounsSingle =', nounsSingle, 'nounsPlural =', nounsPlural, 'verbs =', verbs);
@@ -49,7 +50,8 @@
                     conjugate = 'a';
                 }
 
-                console.log('set random variables');
+                noun1 = toUpperCase(noun1[0]) + noun1.slice(0, 1);
+
                 console.log('generated values: noun1 =', noun1, 'noun2 =', noun2, 'conjugate =', conjugate);
                 
                 // Constructing the sentence.
