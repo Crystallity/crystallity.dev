@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="/azurelyte/styles.css" />
     <script type="text/javascript">
         function setup() {
-            console.log('script loaded');
-
             document.querySelector('#generate').addEventListener('click', createSentence);
+            console.log('setup complete');
         }
 
         function createSentence() {
             let output = document.querySelector('#output');
             output.innerHTML = 'test' + String(Math.random());
+            console.log('sentence created');
         }
 
-        document.body.addEventListener('load', setup);
+        console.log('script loaded');
+        document.body.onload = 'setup()';
     </script>
 </head>
 <body>
