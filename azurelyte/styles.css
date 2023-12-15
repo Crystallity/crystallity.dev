@@ -184,6 +184,7 @@ details {
     border-radius: 10px;
     padding: 0;
     margin: 5px;
+    display: block;
 }
 
 summary {
@@ -244,7 +245,7 @@ h1.docHead {
     font-size: 76px;
     border-radius: 20px;
     color:#3030f0;
-    background: linear-gradient(0deg, #9090ff, #8080ff);
+    background: linear-gradient(0deg, #9090ff, #2020ff);
     padding: 7px;
     margin: 0px;
     display: inline-block;
