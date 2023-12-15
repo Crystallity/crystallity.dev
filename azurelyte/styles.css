@@ -185,6 +185,7 @@ details {
     padding: 0;
     margin: 5px;
     display: block;
+    float: center;
 }
 
 summary {
