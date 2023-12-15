@@ -24,29 +24,29 @@
                 const nounsPlural = ['Nosotros', 'Nosotras', 'UstedesIm', 'Ellos', 'Ellas', 'Las estudiantes', 'Mis amigos'];
                 const verbs = ['Eschuch', 'Busc', 'Ayud'];
 
-                console.log('loaded constants: output=', output, ' nounsSingle=', nounsSingle, ' nounsPlural=', nounsPlural, ' verbs=', verbs);
+                console.log('loaded constants: output =', output, 'nounsSingle =', nounsSingle, 'nounsPlural =', nounsPlural, 'verbs =', verbs);
 
                 // I might add more words later but these work for now.
 
                 let plural1, plural2 = Math.round(Math.random());
                 // There's probably a better way to do this, but I don't really care.
-                if (plural1) {
+                if (plural1 == 1) {
                     let noun1 = nounsPlural[Math.round(Math.random()*(nounsPlural.length-1))];
                 } else {
                     let noun1 = nounsSingle[Math.round(Math.random()*(nounsSingle.length-1))];
                 }
-                if (plural2) {
+                if (plural2 == 1) {
                     let noun2 = nounsPlural[Math.round(Math.random()*(nounsPlural.length-1))];
                 } else {
                     let noun2 = nounsSingle[Math.round(Math.random()*(nounsSingle.length-1))];
                 }
-                if (plural1) {
+                if (plural1 == 1) {
                     let conjugate = 'an';
                 } else {
                     let conjugate = 'a';
                 }
 
-                console.log('generated values: noun1=', noun1, ' noun2=', noun2, ' conjugate=', conjugate);
+                console.log('generated values: noun1 =', noun1, 'noun2 =', noun2, 'conjugate =', conjugate);
                 
                 // Constructing the sentence.
                 let sentence = noun1 + ' ' + verbs[Math.round(Math.random()*(verbs.length-1))] + conjugate + ' ' + noun2 + '.';
