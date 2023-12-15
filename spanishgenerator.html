@@ -73,7 +73,8 @@
                 border-radius: 10px;
                 width: auto;
                 height: 100%;
-                margin: 20px;
+                margin: 10px;
+                margin-top: 20px;
                 padding: 10px;
                 overflow: auto;
             }
@@ -83,9 +84,11 @@
     <body onload="document.querySelector('#generate').addEventListener('click', createSentence)">
         <!-- The HTML is super simple. I tried to use addEventListener for events, but I was
         having difficulty with it, so I went for an inline onload listener. -->
-        <h1 class="docHead" style="margin: 10px;">Spanish Phrase Generator</h1>
-        <h2>Press the button to generate a random sentence in Spanish.</h2>
-        <button id="generate">Generate</button>
-        <div id="output"></div>
+        <div style="margin: 10px;">
+            <h1 class="docHead">Spanish Phrase Generator</h1>
+            <h2>Press the button to generate a random sentence in Spanish.</h2>
+            <button id="generate">Generate</button>
+            <div id="output"></div>
+        </div>
     </body>
 </html>
