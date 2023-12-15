@@ -15,12 +15,9 @@
             output.innerHTML = 'test' + String(Math.random());
             console.log('sentence created');
         }
-
-        console.log('script loaded');
-        document.body.onload = 'setup()';
     </script>
 </head>
-<body>
+<body onload="setup">
     <h1 class="dochead">Spanish Phrase Generator</h1>
     <h2>Press the button to generate a random sentence in Spanish.</h2>
     <button id="generate">Generate</button>
