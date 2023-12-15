@@ -230,8 +230,7 @@ details > summary::-webkit-details-marker {
 }
 
 details.small {
-    display: inline;
-    width: auto;
+    width: 50%;
 }
 
 p {
@@ -245,7 +244,7 @@ h1.docHead {
     font-size: 76px;
     border-radius: 20px;
     color:#3030f0;
-    background:  linear-gradient(#9090ff, #8080ff);
+    background: linear-gradient(0deg, #9090ff, #8080ff);
     padding: 7px;
     margin: 0px;
     display: inline-block;
