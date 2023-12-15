@@ -64,6 +64,12 @@
                 console.log('sentence creation complete');
             }
 
+            function share() {
+                let sharelink = 'mailto:?subject=Silly Spanish Sentences&body=Made using crystallity.github.io/spanishgenerator\n\n';
+                sharelink = sharelink + document.querySelector('#output').innerText;
+                window.open(sharelink);
+            }
+
             console.log('script loaded');
         </script>
         <!-- Inline stylesheet for small modifications -->
@@ -88,6 +94,7 @@
             <h1 class="docHead">Spanish Phrase Generator</h1>
             <h2>Press the button to generate a random sentence in Spanish.</h2>
             <button id="generate">Generate</button>
+            <button id="share" style="float: right;" onclick="share()">Share</button>
             <div id="output"></div>
         </div>
     </body>
