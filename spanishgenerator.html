@@ -1,26 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Spanish Phrase Generator</title>
+    <head>
+        <title>Spanish Phrase Generator</title>
 
-    <link rel="stylesheet" href="/azurelyte/styles.css" />
-    <script type="text/javascript">
-        function setup() {
-            document.querySelector('#generate').addEventListener('click', createSentence);
-            console.log('setup complete');
-        }
+        <!-- I used the AzureLyte stylesheet because I'm lazy -->
+        <link rel="stylesheet" href="/azurelyte/styles.css" />
+        <!-- Inline JS - normally I would use a seperate file but it's just a small project. -->
+        <script type="text/javascript">
+            function setup() {
+                // So far, this just adds an event listener for the button.
+                document.querySelector('#generate').addEventListener('click', createSentence);
+                console.log('setup complete');
+            }
 
-        function createSentence() {
-            let output = document.querySelector('#output');
-            output.innerHTML = 'test' + String(Math.random());
-            console.log('sentence created');
-        }
-    </script>
-</head>
-<body onload="setup()">
-    <h1 class="dochead">Spanish Phrase Generator</h1>
-    <h2>Press the button to generate a random sentence in Spanish.</h2>
-    <button id="generate">Generate</button>
-    <h1 id="output"></h1>
-</body>
+            function createSentence() {
+                // I'm using a simple algorithm that sticks subjects and verbs together.
+                let output = document.querySelector('#output');
+
+                // I know some of these are pronouns, but they're interchangible with nouns.
+                const nounsSingle = ['Yo', 'Tu', 'El', 'Ella', 'La estudiante', 'Mi amigo', 'Tu maestra'];
+                const nounsPlural = ['Nosotros', 'Nosotras', 'UstedesIm', 'Ellos', 'Ellas', 'Las estudiantes', 'Mis amigos'];
+                const verbs = ['Eschuch', 'Busc', 'Ayud'];
+
+                // I might add more words later but these work for now.
+
+                let plural1, plural2 = Math.round(Math.random());
+                // There's probably a better way to do this, but I don't really care.
+                if (plural1) {
+                    let noun1 = nounsPlural[Math.round(Math.random()*(nounsPlural.length-1))];
+                } else {
+                    let noun1 = nounsSingle[Math.round(Math.random()*(nounsSingle.length-1))];
+                }
+                if (plural2) {
+                    let noun2 = nounsPlural[Math.round(Math.random()*(nounsPlural.length-1))];
+                } else {
+                    let noun2 = nounsSingle[Math.round(Math.random()*(nounsSingle.length-1))];
+                }
+                if (plural1) {
+                    let conjugate = 'an';
+                } else {
+                    let conjugate = 'a';
+                }
+                
+                // Constructing the sentence.
+                let sentence = noun1 + ' ' + verbs[Math.round(Math.random()*(verbs.length-1))] + conjugate + ' ' + noun2 + '.';
+
+                output.innerHTML = sentence;
+                console.log('sentence created');
+            }
+        </script>
+    </head>
+
+    <body onload="setup()">
+        <!-- The HTML is super simple. I tried to use addEventListener for events, but for some
+        reason using it for body.onload didn't work, so that's inline. -->
+        <h1 class="docHead">Spanish Phrase Generator</h1>
+        <h2>Press the button to generate a random sentence in Spanish.</h2>
+        <button id="generate">Generate</button>
+        <h1 id="output"></h1>
+    </body>
 </html>
