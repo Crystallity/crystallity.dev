@@ -24,7 +24,7 @@
                 const nounsPlural = ['Nosotros', 'Nosotras', 'UstedesIm', 'Ellos', 'Ellas', 'Las estudiantes', 'Mis amigos'];
                 const verbs = ['Eschuch', 'Busc', 'Ayud'];
 
-                console.log('loaded constants');
+                console.log('loaded constants: output=', output, ' nounsSingle=', nounsSingle, ' nounsPlural=', nounsPlural, ' verbs=', verbs);
 
                 // I might add more words later but these work for now.
 
@@ -46,13 +46,14 @@
                     let conjugate = 'a';
                 }
 
-                console.log('generated values');
+                console.log('generated values: noun1=', noun1, ' noun2=', noun2, ' conjugate=', conjugate);
                 
                 // Constructing the sentence.
                 let sentence = noun1 + ' ' + verbs[Math.round(Math.random()*(verbs.length-1))] + conjugate + ' ' + noun2 + '.';
+                console.log('constructed sentence: ', sentence);
 
                 output.innerHTML = sentence;
-                console.log('sentence created');
+                console.log('sentence creation complete');
             }
 
             console.log('script loaded');
