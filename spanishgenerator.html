@@ -66,8 +66,8 @@
 
             function share() {
                 // A simple sharing button that opens the user's mail client.
-                let sharelink = 'mailto:?subject=Silly Spanish Sentences&body=Made using crystallity.github.io/spanishgenerator\n\n';
-                sharelink = sharelink + document.querySelector('#output').innerText;
+                let sharelink = 'mailto:?subject=Silly%20Spanish%20Sentences&body=Made%20using%20crystallity.github.io/spanishgenerator%0A%0D%0A%0D';
+                sharelink = sharelink + encodeURIComponent(querySelector('#output').innerText);
                 window.open(sharelink);
                 console.log('shared sentences');
             }
