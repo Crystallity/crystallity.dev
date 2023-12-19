@@ -8,6 +8,10 @@
     border-left: none;
 }
 
+.navbarIcon, .navlink {
+    color: #f0f0f0;
+}
+
 body {
     background-color: #2d2d2d;
 }
@@ -16,6 +20,6 @@ p, button, summary, summary::after {
     color: #ffffff;
 }
 
-.navbarIcon, .navlink {
-    color: #f0f0f0;
+details[open] > summary {
+    background-color: #6060ff;
 }

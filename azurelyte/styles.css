@@ -175,7 +175,7 @@ margins keep collapsing, so it needs to be all padding. */
 }
 
 details {
-    border: 2px solid #505050;
+    border: 2px solid #808080;
     border-radius: 10px;
     padding: 0;
     margin: auto;
@@ -223,8 +223,7 @@ details[open] > summary::after {
 }
 
 details[open] > summary {
-    background-color: #b0b0ff;
-    border-bottom: 2px solid #505050;
+    border-bottom: 2px solid #808080;
 }
 
 details > summary {
