@@ -115,14 +115,13 @@ margins keep collapsing, so it needs to be all padding. */
     position: static;
     white-space: nowrap;
     text-decoration: none;
-    font-size: 40px;
+    font-size: 24px;
     font-family: "Comfortaa", sans-serif;
-    color: #000000a0;
     transition: 0.2s;
 }
 
 .navlink:hover {
-    color: black;
+    color: #808080a0;
 }
 
 #navLinkWrapper {
@@ -142,7 +141,6 @@ margins keep collapsing, so it needs to be all padding. */
 }
 
 .navbarIcon:hover {
-    color: #000000;
     background-color: #80808050;
 }
 

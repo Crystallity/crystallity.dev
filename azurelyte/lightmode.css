@@ -14,6 +14,6 @@ p, button, summary, summary::after {
     color: #000000;
 }
 
-.navbarIcon {
+.navbarIcon, .navlink {
     color: #2d2d2d;
 }
