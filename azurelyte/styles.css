@@ -216,7 +216,7 @@ summary::before {
     display: inline-block;
     font-size: 32px;
     transition: color 0.5s;
-    content: '<span class="material-symbols-rounded">expand_more</span>';
+    content: '&#x25BC;';
 }
 
 details[open] > summary::before {
