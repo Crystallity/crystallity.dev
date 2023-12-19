@@ -210,12 +210,14 @@ details > p {
     margin: 5px;
 }
 
-summary::before {
+summary::after {
     margin-right: 1ch;
     margin-left: 1ch;
     display: inline-block;
-    font-size: 32px;
-    transition: color 0.5s;
+    font-size: 48px;
+    transition: 
+        color 0.5s,
+        transform 0.2s;
     content: '+';
 }
 
