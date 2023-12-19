@@ -10,6 +10,6 @@ body {
     background-color: #2d2d2d;
 }
 
-p, button, summary {
+p, button, summary, summary::after {
     color: #ffffff;
 }
