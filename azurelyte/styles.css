@@ -180,9 +180,10 @@ margins keep collapsing, so it needs to be all padding. */
 details {
     border: 2px solid #505050;
     border-radius: 10px;
-    padding: 0;
-    margin: max(5px, auto);
+    padding: 5px;
+    margin: auto;
     margin-top: 5px;
+    margin-bottom: 5px;
     display: block;
 }
 
