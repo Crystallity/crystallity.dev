@@ -35,11 +35,14 @@ function loadContent() {
     fetchText('./writetest2.html').then(data => {page_writetest2 = data});
 }
 
+let darkmode = false;
+
 function toggleTheme() {
-    let theme = document.querySelector('#theme').href;
-    if (theme == './lightmode.css') {
-        theme = './darkmode.css';
+    let theme = document.querySelector('#theme');
+    darkmode = !darkmode;
+    if (darkmode) {
+        theme.href = './darkmode.css';
     } else {
-        theme = './lightmode.css';
+        theme.href = './lightmode.css';
     }
 }
