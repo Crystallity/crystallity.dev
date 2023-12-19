@@ -201,6 +201,7 @@ summary {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 5px;
+    text-align: center;
     transition: 
         background-color 0.2s,
         color 0.5s;
