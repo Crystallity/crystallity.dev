@@ -277,7 +277,9 @@ button {
     border-radius: 8px;
     border: 2px solid #5050f0;
     margin: 5px;
-    transition: 0.2s;
+    transition: 
+        background-color 0.2s,
+        color 0.5s;
 }
 
 ::selection {

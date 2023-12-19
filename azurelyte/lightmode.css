@@ -10,6 +10,6 @@ body {
     background-color: #fcfcfc;
 }
 
-p {
+p, button, summary {
     color: #000000;
 }
