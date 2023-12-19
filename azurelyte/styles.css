@@ -214,15 +214,15 @@ summary::after {
     margin-right: 1ch;
     margin-left: 1ch;
     display: inline-block;
-    font-size: 48px;
+    font-size: 32px;
     transition: 
         color 0.5s,
-        transform 0.2s;
+        rotate 0.2s;
     content: '+';
 }
 
 details[open] > summary::before {
-    transform: rotate(45deg);
+    rotate: 45deg;
 }
 
 details[open] > summary {
