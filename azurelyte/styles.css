@@ -90,13 +90,13 @@ body {
 #navbar-expanded {
     margin: 0;
     padding: 0;
+    border: 2px solid #2d2d2d;
     border-left: none;
     width: 0;
     position: fixed;
     top: -2px;
     left: 58px;
     transition: 0.5s;
-    border: 2px solid #2d2d2d;
 }
 
 /* The margin-top for .navlink was ridiculously hard to figure out.
