@@ -117,8 +117,7 @@ margins keep collapsing, so it needs to be all padding. */
     font-size: 24px;
     font-family: "Comfortaa", sans-serif;
     transition: 0.2s;
-    margin: 3px;
-    padding: 24px;
+    padding-top: 24px;
 }
 
 .navlink:hover {
