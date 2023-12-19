@@ -216,7 +216,7 @@ summary::before {
     display: inline-block;
     font-size: 32px;
     transition: color 0.5s;
-    content: '&#x25BC;';
+    content: '▼';
 }
 
 details[open] > summary::before {
