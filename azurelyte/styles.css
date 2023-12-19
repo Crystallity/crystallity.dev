@@ -221,16 +221,7 @@ summary::after {
 }
 
 details[open] > summary::after {
-    animation: widget 0.2s alternate initial;
-}
-
-@keyframes widget {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(45deg);
-    }
+    rotate: 45deg;
 }
 
 details[open] > summary {
