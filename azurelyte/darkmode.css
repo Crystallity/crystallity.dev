@@ -13,3 +13,7 @@ body {
 p, button, summary, summary::after {
     color: #ffffff;
 }
+
+.navbarIcon {
+    color: #ffffffa0;
+}
