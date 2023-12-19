@@ -218,6 +218,7 @@ summary::after {
     transition: 
         color 0.5s,
         rotate 0.2s;
+    rotate: 0deg;
     content: '+';
 }
 
