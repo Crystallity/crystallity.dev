@@ -96,6 +96,7 @@ body {
     top: -2px;
     left: 58px;
     transition: 0.5s;
+    border: 2px solid #2d2d2d;
 }
 
 /* The margin-top for .navlink was ridiculously hard to figure out.
