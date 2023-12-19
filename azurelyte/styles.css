@@ -90,7 +90,6 @@ body {
 #navbar-expanded {
     margin: 0;
     padding: 0;
-    border: 2px solid #000000a0;
     border-left: none;
     width: 0;
     position: fixed;
