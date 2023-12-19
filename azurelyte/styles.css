@@ -221,7 +221,7 @@ summary::after {
     content: '+';
 }
 
-details[open] > summary::before {
+details[open] > summary::after {
     rotate: 45deg;
 }
 
