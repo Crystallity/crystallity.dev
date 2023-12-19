@@ -15,8 +15,8 @@ function openNav() {
             <a class="navlink" href="#">Site Changelog</a>
             <a class="navlink" onclick="window.location.replace('https://crystallity.github.io')">Profile</a>
         `;
-        document.getElementById("navbar-expanded").style.width = "500px";
-        document.getElementById("main").style.marginLeft = "560px";
+        document.getElementById("navbar-expanded").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "360px";
     } else {
         document.getElementById("navbar-expanded").innerHTML = `
             <div id="navlinkWrapper">
