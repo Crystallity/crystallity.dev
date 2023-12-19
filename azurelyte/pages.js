@@ -34,3 +34,12 @@ function loadContent() {
     fetchText('./styletest.html').then(data => {page_styletest = data});
     fetchText('./writetest2.html').then(data => {page_writetest2 = data});
 }
+
+function toggleTheme() {
+    let theme = document.querySelector('#theme').href;
+    if (theme == './lightmode.css') {
+        theme = './darkmode.css';
+    } else {
+        theme = './lightmode.css';
+    }
+}
