@@ -75,7 +75,6 @@ body {
 }
 
 #navbar {
-    background-color:#fcfcfc;
     margin: 0;
     padding: 0;
     border: 2px solid #000000a0;
@@ -87,7 +86,6 @@ body {
 }
 
 #navbar-expanded {
-    background-color:#fcfcfc;
     margin: 0;
     padding: 0;
     border: 2px solid #000000a0;
