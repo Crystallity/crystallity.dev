@@ -73,6 +73,7 @@ body {
     transition: margin-left 0.5s;
     overflow-x: hidden;
     text-align: center;
+    padding: 5px;
 }
 
 #navbar {
