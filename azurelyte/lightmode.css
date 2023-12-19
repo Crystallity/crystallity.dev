@@ -5,6 +5,7 @@
 #navbar-expanded {
     background-color: #fcfcfc;
     border: 2px solid #2d2d2d;
+    border-left: none;
 }
 
 body {
