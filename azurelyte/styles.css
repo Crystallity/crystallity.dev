@@ -216,14 +216,21 @@ summary::after {
     display: inline-block;
     font-size: 32px;
     transition: 
-        color 0.5s,
-        transform 0.2s;
+        color 0.5s;
     content: '+';
 }
 
 details[open] > summary::after {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    animation: widget 0.2s alternate initial;
+}
+
+@keyframes widget {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
 }
 
 details[open] > summary {
