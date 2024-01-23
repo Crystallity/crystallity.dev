@@ -264,10 +264,11 @@ h1 {
 }
 
 h2 {
-    color:#3030f0;
     font-family:"Quicksand",sans-serif;
     font-size:32px;
     user-select: none;
+    transition:
+        color 0.5s;
 }
 
 button {

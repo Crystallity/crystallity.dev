@@ -20,6 +20,10 @@ p, button, summary, summary::after {
     color: #ffffff;
 }
 
+h2 {
+    color: #5050f0;
+}
+
 details[open] > summary {
     background-color: #6060ff;
 }
