@@ -42,6 +42,7 @@ function toggleTheme() {
     let theme = document.querySelector('#theme');
     let midnight = document.querySelector('#midnightTheme');
     themeset += 1;
+    console.log('[azurelyte/pages.js/toggleTheme] declaration 1 complete; themeset =', themeset);
     midnight.href = '';
     console.log('[azurelyte/pages.js/toggleTheme] declarations complete; themeset =', themeset);
     if (themeset == 0) {
