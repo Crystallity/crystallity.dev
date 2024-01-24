@@ -38,19 +38,26 @@ function loadContent() {
 let themeset = 0;
 
 function toggleTheme() {
+    console.log('[azurelyte/pages.js/toggleTheme] running function with themeset =', themeset);
     let theme = document.querySelector('#theme');
     let midnight = document.querySelector('#midnight');
     themeset += 1;
     midnight.href = '';
+    console.log('[azurelyte/pages.js/toggleTheme] declarations complete; themeset =', themeset);
     if (themeset == 0) {
         theme.href = './lightmode.css';
+        console.log('[azurelyte/pages.js/toggleTheme] set to lightmode');
     } else if (themeset == 1) {
         theme.href = './darkmode.css';
+        console.log('[azurelyte/pages.js/toggleTheme] set to darkmode');
     } else if (themeset == 2) {
         theme.href = './darkmode.css';
         midnight.href = './midnight.css';
+        console.log('[azurelyte/pages.js/toggleTheme] set to midnight');
     } else {
         themeset = -1;
+        console.log('[azurelyte/pages.js/toggleTheme] reset theme');
         toggleTheme();
     }
+    console.log('[azurelyte/pages.js/toggleTheme] function complete');
 }
