@@ -12,7 +12,7 @@ function openNav() {
             <a class="navlink" href="#">Falconnect</a>
             <a class="navlink" href="#">Web Apps</a>
             <a class="navlink" href="#">News</a>
-            <a class="navlink" href="#">Site Changelog</a>
+            <a class="navlink" onclick="overwriteEx(page_changelog)">Site Changelog</a>
             <a class="navlink" onclick="window.location.replace('https://crystallity.github.io')">Profile</a>
         `;
         document.getElementById("navbar-expanded").style.width = "300px";

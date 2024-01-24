@@ -32,7 +32,7 @@ function loadContent() {
     fetchText('./page1.html').then(data => {page_1 = data});
     fetchText('./page2.html').then(data => {page_2 = data});
     fetchText('./styletest.html').then(data => {page_styletest = data});
-    fetchText('./writetest2.html').then(data => {page_writetest2 = data});
+    fetchText('./changelog.html').then(data => {page_changelog = data});
 }
 
 let darkmode = false;
