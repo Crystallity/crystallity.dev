@@ -37,6 +37,11 @@ function loadContent() {
 
 let themeset = 0;
 
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    let themeset = 1;
+    document.querySelector('#theme').href = './darkmode.css';
+}
+
 function toggleTheme() {
     console.log('[azurelyte/pages.js/toggleTheme] running function with themeset =', themeset);
     let theme = document.querySelector('#theme');
