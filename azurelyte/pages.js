@@ -35,14 +35,22 @@ function loadContent() {
     fetchText('./changelog.html').then(data => {page_changelog = data});
 }
 
-let darkmode = false;
+let themeset = 0;
 
 function toggleTheme() {
     let theme = document.querySelector('#theme');
-    darkmode = !darkmode;
-    if (darkmode) {
-        theme.href = './darkmode.css';
-    } else {
+    let midnight = document.querySelector('#midnight');
+    themeset += 1;
+    midnight.href = '';
+    if (themeset == 0) {
         theme.href = './lightmode.css';
+    } else if (themeset == 1) {
+        theme.href = './darkmode.css';
+    } else if (themeset == 2) {
+        theme.href = './darkmode.css';
+        midnight.href = './midnight.css';
+    } else {
+        themeset = -1;
+        toggleTheme();
     }
 }
