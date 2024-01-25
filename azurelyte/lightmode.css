@@ -12,6 +12,10 @@
     color: #2d2d2d;
 }
 
+#themeButton {
+    color: black;
+}
+
 body {
     background-color: #fcfcfc;
 }

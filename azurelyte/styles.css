@@ -148,12 +148,10 @@ margins keep collapsing, so it needs to be all padding. */
     position: fixed;
     right: 10px;
     bottom: 10px;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     text-align: center;
     border-radius: 50%;
-    background-color: black;
-    color: white;
 }
 
 #closeBttn {
