@@ -152,13 +152,13 @@ margins keep collapsing, so it needs to be all padding. */
     height: 60px;
     text-align: center;
     border-radius: 50%;
-    background-color: #151515;
+    background-color: #00000000;
     transition: 
         background-color 0.2s;
 }
 
-#themeButton:hover {
-    background-color: #202020;
+#themeButtonSymbol {
+    font-size: 60px;
 }
 
 #closeBttn {
@@ -170,7 +170,8 @@ margins keep collapsing, so it needs to be all padding. */
     'FILL' 0,
     'wght' 700,
     'GRAD' 0,
-    'opsz' 48
+    'opsz' 48;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {

@@ -12,6 +12,14 @@
     color: #2d2d2d;
 }
 
+#themeButton:hover {
+    background-color: #00000015;
+}
+
+#themeButtonSymbol {
+    color: #2d2d2d;
+}
+
 body {
     background-color: #fcfcfc;
 }
