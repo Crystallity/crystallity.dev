@@ -145,8 +145,15 @@ margins keep collapsing, so it needs to be all padding. */
 }
 
 #themeButton {
-    display: block;
-    float: right;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
 }
 
 #closeBttn {
