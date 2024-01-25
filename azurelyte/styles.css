@@ -152,7 +152,13 @@ margins keep collapsing, so it needs to be all padding. */
     height: 60px;
     text-align: center;
     border-radius: 50%;
-    background-color: #00000000;
+    background-color: #151515;
+    transition: 
+        background-color 0.2s;
+}
+
+#themeButton:hover {
+    background-color: #202020;
 }
 
 #closeBttn {
