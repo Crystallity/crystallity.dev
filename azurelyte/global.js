@@ -68,7 +68,7 @@ let themeset = 0;
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     let themeset = 1;
-    document.querySelector('#theme').href = './darkmode.css';
+    document.querySelector('#theme').href = './styles/darkmode.css';
 }
 
 function toggleTheme() {
@@ -80,14 +80,14 @@ function toggleTheme() {
     midnight.href = '';
     console.log('[azurelyte/pages.js/toggleTheme] declarations complete; themeset =', themeset);
     if (themeset == 0) {
-        theme.href = './lightmode.css';
+        theme.href = './styles/lightmode.css';
         console.log('[azurelyte/pages.js/toggleTheme] set to lightmode');
     } else if (themeset == 1) {
-        theme.href = './darkmode.css';
+        theme.href = './styles/darkmode.css';
         console.log('[azurelyte/pages.js/toggleTheme] set to darkmode');
     } else if (themeset == 2) {
-        theme.href = './darkmode.css';
-        midnight.href = './midnight.css';
+        theme.href = './styles/darkmode.css';
+        midnight.href = './styles/midnight.css';
         console.log('[azurelyte/pages.js/toggleTheme] set to midnight');
     } else {
         themeset = -1;
