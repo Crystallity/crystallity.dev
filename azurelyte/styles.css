@@ -160,6 +160,8 @@ margins keep collapsing, so it needs to be all padding. */
 
 #themeButtonSymbol {
     font-size: 60px;
+    transition:
+        color 0.5s;
 }
 
 #closeBttn {
