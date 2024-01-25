@@ -145,9 +145,9 @@ margins keep collapsing, so it needs to be all padding. */
 }
 
 #themeButton {
-    position: absolute;
-    right: 5px;
-    bottom: 5px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
     width: 100px;
     height: 100px;
     text-align: center;
