@@ -1,3 +1,12 @@
+/*
+global.js
+
+This file contains functions used on all windows, such as navbar
+functionality and code for switching themes.
+*/
+
+// Navbar code
+
 let e = false;
 
 function openNav() {
@@ -51,4 +60,39 @@ function toggleNav() {
     } else {
         openNav();
     }
+}
+
+// Theme code
+
+let themeset = 0;
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    let themeset = 1;
+    document.querySelector('#theme').href = './darkmode.css';
+}
+
+function toggleTheme() {
+    console.log('[azurelyte/pages.js/toggleTheme] running function with themeset =', themeset);
+    let theme = document.querySelector('#theme');
+    let midnight = document.querySelector('#midnightTheme');
+    themeset += 1;
+    console.log('[azurelyte/pages.js/toggleTheme] declaration 1 complete; themeset =', themeset);
+    midnight.href = '';
+    console.log('[azurelyte/pages.js/toggleTheme] declarations complete; themeset =', themeset);
+    if (themeset == 0) {
+        theme.href = './lightmode.css';
+        console.log('[azurelyte/pages.js/toggleTheme] set to lightmode');
+    } else if (themeset == 1) {
+        theme.href = './darkmode.css';
+        console.log('[azurelyte/pages.js/toggleTheme] set to darkmode');
+    } else if (themeset == 2) {
+        theme.href = './darkmode.css';
+        midnight.href = './midnight.css';
+        console.log('[azurelyte/pages.js/toggleTheme] set to midnight');
+    } else {
+        themeset = -1;
+        console.log('[azurelyte/pages.js/toggleTheme] reset theme');
+        toggleTheme();
+    }
+    console.log('[azurelyte/pages.js/toggleTheme] function complete');
 }
