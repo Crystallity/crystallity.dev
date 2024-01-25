@@ -144,7 +144,7 @@ margins keep collapsing, so it needs to be all padding. */
     background-color: #80808050;
 }
 
-#myBtn {
+#themeButton {
     display: block; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
     bottom: 20px; /* Place the button at the bottom of the page */
