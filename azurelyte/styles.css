@@ -144,6 +144,11 @@ margins keep collapsing, so it needs to be all padding. */
     background-color: #80808050;
 }
 
+#themeButton {
+    display: block;
+    float: right;
+}
+
 #closeBttn {
     float: right;
 }
