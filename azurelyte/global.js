@@ -13,7 +13,7 @@ function openNav() {
     e = true;
     if (window.innerWidth > 900) {
         document.getElementById("navbar-expanded").innerHTML = `
-            <span class="material-symbols-rounded navbarIcon" id="closeBttn" onclick="toggleNav()">close</span>
+            <span class="material-symbols-rounded navbarIcon" class="closeBttn" onclick="toggleNav()">close</span>
             <a class="navlink" onclick="closeNav()">Open/Close Menu</a>
             <a class="navlink" onclick="overwriteEx(page_home)">Home</a>
             <a class="navlink" href="#">Help</a>

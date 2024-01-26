@@ -164,7 +164,7 @@ margins keep collapsing, so it needs to be all padding. */
         color 0.5s;
 }
 
-#closeBttn {
+.closeBttn {
     float: right;
 }
 
