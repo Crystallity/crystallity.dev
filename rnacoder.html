@@ -13,6 +13,7 @@
             document.querySelector('#dm').addEventListener('click', dm)
             document.querySelector('#mt').addEventListener('click', mt)
             document.querySelector('#ma').addEventListener('click', ma)
+            document.querySelector('#copy').addEventListener('click', copy)
         }
 
         function dm() {
@@ -28,6 +29,8 @@
                     newstrand = newstrand + 'G';
                 } else if (base == 'G') {
                     newstrand = newstrand + 'C';
+                } else if (base == ' ') {
+                    newstrand = newstrand + ' ';
                 }
             });
             document.querySelector('#output').value = newstrand;
@@ -46,6 +49,8 @@
                     newstrand = newstrand + 'G';
                 } else if (base == 'G') {
                     newstrand = newstrand + 'C';
+                } else if (base == ' ') {
+                    newstrand = newstrand + ' ';
                 }
             });
             document.querySelector('#output').value = newstrand;
@@ -54,17 +59,25 @@
         function ma() {
             document.querySelector('#output').value = 'This function is a work in progress!';
         }
+
+        function copy() {
+            navigator.clipboard.writeText(document.querySelector('#output').value);
+        }
     </script>
 
 </head>
 <body onload="setUp()">
+    <h2>RNA coder</h2>
+    <p>Put a DNA or RNA sequence into the first textbox, then select the button to convert it. You can include spaces to seperate codons.</p>
+
     <textarea id="input"></textarea><br>
 
     <button id="dm">DNA to mRNA</button>
     <button id="mt">mRNA to tRNA</button>
     <button id="ma">mRNA to amino acid (WIP)</button><br>
 
-    <textarea id="output"></textarea>
+    <textarea id="output"></textarea><br>
+    <button id="copy">Copy to clipboard</button>
 
 </body>
 </html>
