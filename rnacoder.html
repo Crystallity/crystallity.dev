@@ -14,6 +14,7 @@
             document.querySelector('#mt').addEventListener('click', mt)
             document.querySelector('#ma').addEventListener('click', ma)
             document.querySelector('#copy').addEventListener('click', copy)
+            document.querySelector('#paste').addEventListener('click', paste)
         }
 
         function dm() {
@@ -64,6 +65,14 @@
             navigator.clipboard.writeText(document.querySelector('#output').value);
             alert('Copied to clipboard!')
         }
+
+        function paste() {
+            navigator.clipboard.readText().then(result => {
+                document.querySelector('#input').value = result;
+            }).catch(error => {
+                alert('There was an error while attempting to paste: ' + error)
+            });
+        }
     </script>
 
 </head>
@@ -71,6 +80,7 @@
     <h2>RNA coder</h2>
     <p>Put a DNA or RNA sequence into the first textbox, then select the button to convert it. You can include spaces to seperate codons.</p>
 
+    <button id="paste">Paste from clipboard</button>
     <textarea id="input"></textarea><br>
 
     <button id="dm">DNA to mRNA</button>
