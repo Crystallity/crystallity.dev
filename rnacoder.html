@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RNA Coder</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <style>
+        .hidden { display:none; }
+    </style>
+
+    <script>
+        function setUp() {
+            document.querySelector('#dm').addEventListener('click', dm)
+            document.querySelector('#mt').addEventListener('click', mt)
+            document.querySelector('#ma').addEventListener('click', ma)
+        }
+
+        function dm() {
+            let strand = document.querySelector('#input').value;
+            strand = strand.split('');
+            let newstrand = '';
+            strand.forEach(base => {
+                if (base == 'A') {
+                    newstrand = newstrand + 'U';
+                } else if (base == 'T') {
+                    newstrand = newstrand + 'A';
+                } else if (base == 'C') {
+                    newstrand = newstrand + 'G';
+                } else if (base == 'G') {
+                    newstrand = newstrand + 'C';
+                }
+            });
+            document.querySelector('#output').value = newstrand;
+        }
+
+        function mt() {
+            let strand = document.querySelector('#input').value;
+            strand = strand.split('');
+            let newstrand = '';
+            strand.forEach(base => {
+                if (base == 'A') {
+                    newstrand = newstrand + 'U';
+                } else if (base == 'U') {
+                    newstrand = newstrand + 'A';
+                } else if (base == 'C') {
+                    newstrand = newstrand + 'G';
+                } else if (base == 'G') {
+                    newstrand = newstrand + 'C';
+                }
+            });
+            document.querySelector('#output').value = newstrand;
+        }
+
+        function ma() {
+            document.querySelector('#output').value = 'This function is a work in progress!';
+        }
+    </script>
+
+</head>
+<body onload="setUp()">
+    <textarea id="input"></textarea><br>
+
+    <button id="dm">DNA to mRNA</button>
+    <button id="mt">mRNA to tRNA</button>
+    <button id="ma">mRNA to amino acid (WIP)</button><br>
+
+    <textarea id="output"></textarea>
+
+</body>
+</html>
