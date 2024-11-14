@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress</title>
+
+  <script>
+    async function upload(percent) {
+      try {
+        const response = await fetch('https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3MzE3MTYzMjQsImlhdCI6MTczMTYwNDcyNCwiZGF0YWJhc2VfaWQiOiIxOWZlNDkyNC1mMGI0LTRjZjYtOWZhMy0zMzU0N2Q1MDE3OGUifQ.Wp_8ujNP2zjoz2ELdRdTUKSIj9kvxyHwXnMQO5oMOIhhp7Zsf4dk8iTh2ZAKkQMR-SJrwnW6Tzb2xBMK8TCpBQ', {method: 'POST'});
+        if (!response.ok) {
+          throw new Error('Response: ' + response.status);
+        }
+
+        console.log(response.status);
+      } catch(error) {
+        console.error(error.message);
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="number" id="input"></input>
+  <button id="send">Send</button>
+</body>
+</html>
