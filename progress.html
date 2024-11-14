@@ -23,6 +23,8 @@
 </head>
 <body>
   <input type="number" id="input"></input>
-  <button id="send" onclick="upload(document.getElementById(input).content)">Send</button>
+  <button id="send" onclick="upload(document.getElementById(input).value)">Send</button>
+  <label for="progress">Progress:</label>
+  <progress id="progress" max="100" value="50"></progress>
 </body>
 </html>
