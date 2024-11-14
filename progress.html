@@ -35,9 +35,7 @@
     async function download() {
       console.log('Downloading progress');
       try {
-        const request = fetch('https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3MzE3MTYzMjQsImlhdCI6MTczMTYwNDcyNCwiZGF0YWJhc2VfaWQiOiIxOWZlNDkyNC1mMGI0LTRjZjYtOWZhMy0zMzU0N2Q1MDE3OGUifQ.Wp_8ujNP2zjoz2ELdRdTUKSIj9kvxyHwXnMQO5oMOIhhp7Zsf4dk8iTh2ZAKkQMR-SJrwnW6Tzb2xBMK8TCpBQ/progress')
-        console.log('Started request', request)
-        request.then((response) => {
+        fetch('https://kv.replit.com/v0/eyJhbGciOiJIUzUxMiIsImlzcyI6ImNvbm1hbiIsImtpZCI6InByb2Q6MSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb25tYW4iLCJleHAiOjE3MzE3MTYzMjQsImlhdCI6MTczMTYwNDcyNCwiZGF0YWJhc2VfaWQiOiIxOWZlNDkyNC1mMGI0LTRjZjYtOWZhMy0zMzU0N2Q1MDE3OGUifQ.Wp_8ujNP2zjoz2ELdRdTUKSIj9kvxyHwXnMQO5oMOIhhp7Zsf4dk8iTh2ZAKkQMR-SJrwnW6Tzb2xBMK8TCpBQ/progress').then((response) => {
            if (!response.ok) {
             throw new Error('Response: ' + response.status + ' ' + response.statusText);
           }
