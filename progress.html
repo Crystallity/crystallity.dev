@@ -26,10 +26,10 @@
     let counter = 0;
 
    function update() {
+     console.log('Loaded successfully');
      download();
      setInterval(download, 30000);
      setInterval(timer, 1000);
-     console.log('Loaded successfully');
    }
 
     async function download() {
@@ -43,7 +43,7 @@
           }
 
           console.log('Received response', response.status, response.statusText);
-          document.getElementById('progress').value = response.body;
+          document.getElementById('progress').value = response.text();
           counter = -1;
          });
       } catch(error) {
