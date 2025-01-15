@@ -166,6 +166,9 @@ margins keep collapsing, so it needs to be all padding. */
 
 .closeBttn {
     float: right;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 .material-symbols-rounded {
