@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Coded! - Guess the Color</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .game-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        #color-box {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        #score {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Color Coded!</h1>
+        <div id="color-box"></div>
+        <p>Guess the RGB value of the color shown!</p>
+        <input type="text" id="guess-input" placeholder="e.g., rgb(255,0,0)">
+        <button id="guess-button">Check Guess</button>
+        <div id="message"></div>
+        <div id="score">Score: 0</div>
+    </div>
+
+    <script>
+        const colorBox = document.getElementById('color-box');
+        const guessInput = document.getElementById('guess-input');
+        const guessButton = document.getElementById('guess-button');
+        const message = document.getElementById('message');
+        const scoreDisplay = document.getElementById('score');
+
+        let targetColor;
+        let score = 0;
+
+        function getRandomRGB() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        function startGame() {
+            targetColor = getRandomRGB();
+            colorBox.style.backgroundColor = targetColor;
+            message.textContent = "";
+            guessInput.value = ""; // Clear previous input
+            guessInput.focus();
+        }
+
+        function checkGuess() {
+            const userGuess = guessInput.value.trim().toLowerCase();
+            if (userGuess === targetColor) {
+                message.textContent = "🎉 You got it right! 🎉";
+                score++;
+                scoreDisplay.textContent = `Score: ${score}`;
+                setTimeout(startGame, 1500); // Start new round after a short delay
+            } else {
+                message.textContent = "🤔 Not quite! Try again.";
+            }
+        }
+
+        guessButton.addEventListener('click', checkGuess);
+
+        // Start the game when the page loads
+        startGame();
+    </script>
+</body>
+</html>
